@@ -1,0 +1,107 @@
+[1266] Log start
+[1266] Cmd: ./llama-cli -m ggml-model-q2_k.gguf -p "I believe the meaning of life is" -n 128
+[1266] main: build = 3505 (b72c20b8)
+[1266] main: built with riscv64-unknown-linux-gnu-gcc (Xuantie-900 linux-5.10.4 glibc gcc Toolchain V2.6.0 B-20220715) 10.2.0 for riscv64-unknown-linux-gnu
+[1266] main: seed  = 1266
+[1266] main: llama backend init
+[1266] main: load the model and apply lora adapter, if any
+[1266] llama_model_loader: loaded meta data with 23 key-value pairs and 291 tensors from ggml-model-q2_k.gguf (version GGUF V3 (latest))
+[1266] llama_model_loader: Dumping metadata keys/values. Note: KV overrides do not apply in this output.
+[1266] llama_model_loader: - kv   0:                       general.architecture str              = llama
+[1266] llama_model_loader: - kv   1:                               general.name str              = llama-3-chinese-instruct
+[1266] llama_model_loader: - kv   2:                          llama.block_count u32              = 32
+[1266] llama_model_loader: - kv   3:                       llama.context_length u32              = 8192
+[1266] llama_model_loader: - kv   4:                     llama.embedding_length u32              = 4096
+[1266] llama_model_loader: - kv   5:                  llama.feed_forward_length u32              = 14336
+[1266] llama_model_loader: - kv   6:                 llama.attention.head_count u32              = 32
+[1266] llama_model_loader: - kv   7:              llama.attention.head_count_kv u32              = 8
+[1266] llama_model_loader: - kv   8:                       llama.rope.freq_base f32              = 500000.000000
+[1266] llama_model_loader: - kv   9:     llama.attention.layer_norm_rms_epsilon f32              = 0.000010
+[1266] llama_model_loader: - kv  10:                          general.file_type u32              = 10
+[1266] llama_model_loader: - kv  11:                           llama.vocab_size u32              = 128256
+[1266] llama_model_loader: - kv  12:                 llama.rope.dimension_count u32              = 128
+[1266] llama_model_loader: - kv  13:                       tokenizer.ggml.model str              = gpt2
+[1266] llama_model_loader: - kv  14:                         tokenizer.ggml.pre str              = llama-bpe
+[1266] llama_model_loader: - kv  15:                      tokenizer.ggml.tokens arr[str,128256]  = ["!", "\"", "#", "$", "%", "&", "'", ...
+[1266] llama_model_loader: - kv  16:                  tokenizer.ggml.token_type arr[i32,128256]  = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, ...
+[1267] llama_model_loader: - kv  17:                      tokenizer.ggml.merges arr[str,280147]  = ["Ġ Ġ", "Ġ ĠĠĠ", "ĠĠ ĠĠ", "...
+[1267] llama_model_loader: - kv  18:                tokenizer.ggml.bos_token_id u32              = 128000
+[1267] llama_model_loader: - kv  19:                tokenizer.ggml.eos_token_id u32              = 128001
+[1267] llama_model_loader: - kv  20:            tokenizer.ggml.padding_token_id u32              = 128001
+[1267] llama_model_loader: - kv  21:                    tokenizer.chat_template str              = {% set loop_messages = messages %}{% ...
+[1267] llama_model_loader: - kv  22:               general.quantization_version u32              = 2
+[1267] llama_model_loader: - type  f32:   65 tensors
+[1267] llama_model_loader: - type q2_K:  129 tensors
+[1267] llama_model_loader: - type q3_K:   64 tensors
+[1267] llama_model_loader: - type q4_K:   32 tensors
+[1267] llama_model_loader: - type q6_K:    1 tensors
+[1272] llm_load_vocab: special tokens cache size = 256
+[1272] llm_load_vocab: token to piece cache size = 0.8000 MB
+[1272] llm_load_print_meta: format           = GGUF V3 (latest)
+[1272] llm_load_print_meta: arch             = llama
+[1272] llm_load_print_meta: vocab type       = BPE
+[1272] llm_load_print_meta: n_vocab          = 128256
+[1272] llm_load_print_meta: n_merges         = 280147
+[1272] llm_load_print_meta: vocab_only       = 0
+[1272] llm_load_print_meta: n_ctx_train      = 8192
+[1272] llm_load_print_meta: n_embd           = 4096
+[1272] llm_load_print_meta: n_layer          = 32
+[1272] llm_load_print_meta: n_head           = 32
+[1272] llm_load_print_meta: n_head_kv        = 8
+[1272] llm_load_print_meta: n_rot            = 128
+[1272] llm_load_print_meta: n_swa            = 0
+[1272] llm_load_print_meta: n_embd_head_k    = 128
+[1272] llm_load_print_meta: n_embd_head_v    = 128
+[1272] llm_load_print_meta: n_gqa            = 4
+[1272] llm_load_print_meta: n_embd_k_gqa     = 1024
+[1272] llm_load_print_meta: n_embd_v_gqa     = 1024
+[1272] llm_load_print_meta: f_norm_eps       = 0.0e+00
+[1272] llm_load_print_meta: f_norm_rms_eps   = 1.0e-05
+[1272] llm_load_print_meta: f_clamp_kqv      = 0.0e+00
+[1272] llm_load_print_meta: f_max_alibi_bias = 0.0e+00
+[1272] llm_load_print_meta: f_logit_scale    = 0.0e+00
+[1272] llm_load_print_meta: n_ff             = 14336
+[1272] llm_load_print_meta: n_expert         = 0
+[1272] llm_load_print_meta: n_expert_used    = 0
+[1272] llm_load_print_meta: causal attn      = 1
+[1272] llm_load_print_meta: pooling type     = 0
+[1272] llm_load_print_meta: rope type        = 0
+[1272] llm_load_print_meta: rope scaling     = linear
+[1272] llm_load_print_meta: freq_base_train  = 500000.0
+[1272] llm_load_print_meta: freq_scale_train = 1
+[1272] llm_load_print_meta: n_ctx_orig_yarn  = 8192
+[1272] llm_load_print_meta: rope_finetuned   = unknown
+[1272] llm_load_print_meta: ssm_d_conv       = 0
+[1272] llm_load_print_meta: ssm_d_inner      = 0
+[1272] llm_load_print_meta: ssm_d_state      = 0
+[1272] llm_load_print_meta: ssm_dt_rank      = 0
+[1272] llm_load_print_meta: model type       = 8B
+[1272] llm_load_print_meta: model ftype      = Q2_K - Medium
+[1272] llm_load_print_meta: model params     = 8.03 B
+[1272] llm_load_print_meta: model size       = 2.95 GiB (3.16 BPW) 
+[1272] llm_load_print_meta: general.name     = llama-3-chinese-instruct
+[1272] llm_load_print_meta: BOS token        = 128000 '<|begin_of_text|>'
+[1272] llm_load_print_meta: EOS token        = 128001 '<|end_of_text|>'
+[1272] llm_load_print_meta: PAD token        = 128001 '<|end_of_text|>'
+[1272] llm_load_print_meta: LF token         = 128 'Ä'
+[1272] llm_load_print_meta: EOT token        = 128009 '<|eot_id|>'
+[1272] llm_load_print_meta: max token length = 256
+[1272] llm_load_tensors: ggml ctx size =    0.14 MiB
+[1409] llm_load_tensors:        CPU buffer size =  3024.38 MiB
+[1409] .[1409] .[1409] .[1409] .[1409] .[1409] .[1409] .[1409] .[1409] .[1409] .[1409] .[1409] .[1409] .[1409] .[1409] .[1409] .[1409] .[1409] .[1409] .[1409] .[1409] .[1409] .[1409] .[1409] .[1409] .[1409] .[1409] .[1409] .[1409] .[1409] .[1409] .[1409] .[1409] .[1409] .[1409] .[1409] .[1409] .[1409] .[1409] .[1409] .[1409] .[1409] .[1409] .[1409] .[1409] .[1409] .[1409] .[1409] .[1409] .[1409] .[1409] .[1409] .[1409] .[1409] .[1409] .[1409] .[1409] .[1409] .[1409] .[1409] .[1409] .[1409] .[1409] .[1409] .[1409] .[1409] .[1409] .[1409] .[1409] .[1409] .[1409] .[1409] .[1409] .[1409] .[1409] .[1409] .[1409] .[1409] .[1409] .[1409] .[1409] .[1409] .[1409] .[1409] 
+[1411] llama_new_context_with_model: n_ctx      = 8192
+[1411] llama_new_context_with_model: n_batch    = 2048
+[1411] llama_new_context_with_model: n_ubatch   = 512
+[1411] llama_new_context_with_model: flash_attn = 0
+[1411] llama_new_context_with_model: freq_base  = 500000.0
+[1411] llama_new_context_with_model: freq_scale = 1
+[1471] llama_kv_cache_init:        CPU KV buffer size =  1024.00 MiB
+[1471] llama_new_context_with_model: KV self size  = 1024.00 MiB, K (f16):  512.00 MiB, V (f16):  512.00 MiB
+[1471] llama_new_context_with_model:        CPU  output buffer size =     0.49 MiB
+[1472] llama_new_context_with_model:        CPU compute buffer size =   560.01 MiB
+[1472] llama_new_context_with_model: graph nodes  = 1030
+[1472] llama_new_context_with_model: graph splits = 1
+[1472] warming up the model with an empty run
+[1851] n_ctx: 8192
+[1851] 
+[1851] system_info: n_threads = 1 / 1 | AVX = 0 | AVX_VNNI = 0 | AVX2 = 0 | AVX512 = 0 | AVX512_VBMI = 0 | AVX512_VNNI = 0 | AVX512_BF16 = 0 | FMA = 0 | NEON = 0 | SVE = 0 | ARM_FMA = 0 | F16C = 0 | FP16_VA = 0 | WASM_SIMD = 0 | BLAS = 0 | SSE3 = 0 | SSSE3 = 0 | VSX = 0

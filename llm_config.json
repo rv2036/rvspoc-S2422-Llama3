@@ -1,0 +1,15 @@
+{
+    "hidden_size": 4096,
+    "layer_nums": 32,
+    "attention_mask": "float",
+    "key_value_shape": [
+        2,
+        1,
+        0,
+        8,
+        128
+    ],
+    "prompt_template": "<|begin_of_text|><|start_header_id|>user<|end_header_id|>\n\n%s<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+    "is_visual": false,
+    "is_single": true
+}
